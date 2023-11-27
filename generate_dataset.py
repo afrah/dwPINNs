@@ -58,7 +58,7 @@ import matplotlib.animation as mpa
 
 from utilities import *
 
-
+os.environ["KMP_WARNINGS"] = "FALSE" 
 ###################################################
 class Hardswish(nn.Module):  # export-friendly version of nn.Hardswish()
     @staticmethod
@@ -249,7 +249,7 @@ def plot_result(model ,path ):
 
     draw_contourf(t , x , y , data , 1.0 ,10 , model.dirname , 5 , fontsize=17.5 , labelsize=12.5 , axes_pad=1.2)
 
-    model.weight_change_per_layer()
+    # model.weight_change_per_layer()
 
 
 

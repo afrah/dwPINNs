@@ -32,15 +32,15 @@ def lbfgs(opfunc, x, state, maxIter = 100, learningRate = 1, do_verbose = True):
   else:
     verbose = lambda x: None
     
-  f, g = opfunc(x)
+  loss_res, loss_wall , loss_inlet , loss_outlet , loss_initial , loss, gradient = opfunc(x)
 
-  f_hist = [f]
+  f_hist = [loss]
   currentFuncEval = 1
   state.funcEval = state.funcEval + 1
-  p = g.shape[0]
+  p = gradient.shape[0]
 
   # check optimality of initial point
-  tmp1 = tf.abs(g)
+  tmp1 = tf.abs(gradient)
   if tf.reduce_sum(tmp1) <= tolFun:
     verbose("optimality condition below tolFun")
     return x, f_hist
@@ -59,13 +59,13 @@ def lbfgs(opfunc, x, state, maxIter = 100, learningRate = 1, do_verbose = True):
     ## compute gradient descent direction
     ############################################################
     if state.nIter == 1:
-      d = -g
+      d = -gradient
       old_dirs = []
       old_stps = []
       Hdiag = 1
     else:
       # do lbfgs update (update memory)
-      y = g - g_old
+      y = gradient - g_old
       s = d*t
       ys = dot(y, s)
       
@@ -97,7 +97,7 @@ def lbfgs(opfunc, x, state, maxIter = 100, learningRate = 1, do_verbose = True):
       # need to be accessed element-by-element, so don't re-type tensor:
       al = [0]*nCorrection
 
-      q = -g
+      q = -gradient
       for i in range(k-1, -1, -1):
         al[i] = dot(old_dirs[i], q) * ro[i]
         q = q - al[i]*old_stps[i]
@@ -111,14 +111,14 @@ def lbfgs(opfunc, x, state, maxIter = 100, learningRate = 1, do_verbose = True):
       d = r
       # final direction is in r/d (same object)
 
-    g_old = g
-    f_old = f
+    g_old = gradient
+    f_old = loss
     
     ############################################################
     ## compute step length
     ############################################################
     # directional derivative
-    gtd = dot(g, d)
+    gtd = dot(gradient, d)
 
     # check that progress can be made along that direction
     if gtd > -tolX:
@@ -127,7 +127,7 @@ def lbfgs(opfunc, x, state, maxIter = 100, learningRate = 1, do_verbose = True):
 
     # reset initial guess for step size
     if state.nIter == 1:
-      tmp1 = tf.abs(g)
+      tmp1 = tf.abs(gradient)
       t = min(1, 1/tf.reduce_sum(tmp1))
     else:
       t = learningRate
@@ -140,10 +140,10 @@ def lbfgs(opfunc, x, state, maxIter = 100, learningRate = 1, do_verbose = True):
     # re-evaluate function only if not in last iteration
     # the reason we do this: in a stochastic setting,
     # no use to re-evaluate that function here
-      f, g = opfunc(x)
+      loss_res, loss_wall , loss_inlet , loss_outlet , loss_initial , loss, gradient  = opfunc(x)
 
     lsFuncEval = 1
-    f_hist.append(f)
+    f_hist.append(loss)
 
 
     # update func eval
@@ -161,7 +161,7 @@ def lbfgs(opfunc, x, state, maxIter = 100, learningRate = 1, do_verbose = True):
       print('max nb of function evals')
       break
 
-    tmp1 = tf.abs(g)
+    tmp1 = tf.abs(gradient)
     if tf.reduce_sum(tmp1) <=tolFun:
       # check optimality
       print('optimality condition below tolFun')
@@ -180,11 +180,13 @@ def lbfgs(opfunc, x, state, maxIter = 100, learningRate = 1, do_verbose = True):
 
     if do_verbose:
       if nIter % 10 == 0:
-        print("Step %3d loss %6.5f "%(nIter, f.numpy()))
+        print("Step : %3d | loss : %6.5f  | loss_res :  %6.5f | loss_wall :  %6.5f |  loss_inlet :  %6.5f | loss_outlet :  %6.5f | loss_initial : %6.5f  "%(nIter , loss.numpy() , 
+                                                                                                                                                               loss_res.numpy(), loss_wall.numpy(), loss_inlet.numpy(), loss_outlet.numpy(), loss_initial.numpy()))
 
+#loss_res, loss_wall , loss_inlet , loss_outlet , loss_initial , loss
 
     if nIter == maxIter - 1:
-      final_loss = f.numpy()
+      final_loss = loss.numpy()
 
 
   # save state

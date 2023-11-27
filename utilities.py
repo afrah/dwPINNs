@@ -30,7 +30,7 @@ from matplotlib.animation import PillowWriter
 import logging
 
 import torch
-
+os.environ["KMP_WARNINGS"] = "FALSE" 
 
 
 # import torch.optim as optim

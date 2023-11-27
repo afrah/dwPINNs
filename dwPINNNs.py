@@ -241,8 +241,7 @@ def fit(x_f, y_f, t_f, xb, yb, tb, ub, vb, weight_ub, weight_fu, u_exact1, v_exa
     print('Error v: %e' % (error_v))
     print("Starting L-BFGS training")
 
-    loss_and_flat_grad = get_loss_and_flat_grad(x_f_batch, y_f_batch, t_f_batch, xb_batch, yb_batch, tb_batch, ub_batch,
-                                                vb_batch, weight_ub, weight_fu)
+    loss_and_flat_grad = get_loss_and_flat_grad(x_f_batch, y_f_batch, t_f_batch, xb_batch, yb_batch, tb_batch, ub_batch,  vb_batch, weight_ub, weight_fu)
 
     lbfgs(loss_and_flat_grad,
           get_weights(u_model),
@@ -261,8 +260,8 @@ def fit(x_f, y_f, t_f, xb, yb, tb, ub, vb, weight_ub, weight_fu, u_exact1, v_exa
     return MSE_b1, MSE_f1,  weightu, weightf
 
 # L-BFGS implementation from https://github.com/pierremtb/PINNs-TF2.0
-def get_loss_and_flat_grad(x_f_batch, y_f_batch, t_f_batch, xb_batch, yb_batch,
-                           tb_batch, ub_batch, vb_batch,weight_ub, weight_fu):
+def get_loss_and_flat_grad(x_f_batch, y_f_batch, t_f_batch, xb_batch, yb_batch, tb_batch, ub_batch, vb_batch,weight_ub, weight_fu):
+
     def loss_and_flat_grad(w):
         with tf.GradientTape() as tape:
             set_weights(u_model, w, sizes_w, sizes_b)

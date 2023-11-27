@@ -1,0 +1,10 @@
+Epoch: 0| It: 0| Loss: 1.418e+00| physLoss: 1.011e-01 | lINITIAL: 1.074e-01 | wLoss: 6.211e-01 | inLoss: 5.851e-01 | outLoss: 2.893e-03 |Time: 0.05s | rTime: 1.102e-03h | LR: 5.000e-03
+Epoch: 10| It: 0| Loss: 1.582e-01| physLoss: 6.163e-03 | lINITIAL: 1.065e-02 | wLoss: 6.597e-02 | inLoss: 7.336e-02 | outLoss: 2.088e-03 |Time: 0.02s | rTime: 2.244e-01h | LR: 5.000e-03
+Epoch: 20| It: 0| Loss: 2.533e-01| physLoss: 2.673e-02 | lINITIAL: 1.731e-02 | wLoss: 1.184e-01 | inLoss: 8.524e-02 | outLoss: 5.673e-03 |Time: 0.02s | rTime: 4.200e-01h | LR: 5.000e-03
+Epoch: 30| It: 0| Loss: 1.502e-01| physLoss: 4.949e-03 | lINITIAL: 2.009e-02 | wLoss: 6.138e-02 | inLoss: 6.283e-02 | outLoss: 9.324e-04 |Time: 0.02s | rTime: 6.190e-01h | LR: 5.000e-03
+Epoch: 40| It: 0| Loss: 7.086e-02| physLoss: 1.930e-03 | lINITIAL: 1.883e-02 | wLoss: 2.855e-02 | inLoss: 2.051e-02 | outLoss: 1.039e-03 |Time: 0.02s | rTime: 8.165e-01h | LR: 5.000e-03
+Epoch: 50| It: 0| Loss: 1.711e-01| physLoss: 8.038e-03 | lINITIAL: 6.663e-03 | wLoss: 8.267e-02 | inLoss: 7.344e-02 | outLoss: 3.064e-04 |Time: 0.02s | rTime: 1.015e+00h | LR: 5.000e-03
+Epoch: 60| It: 0| Loss: 4.887e-02| physLoss: 6.246e-03 | lINITIAL: 3.793e-03 | wLoss: 2.252e-02 | inLoss: 1.541e-02 | outLoss: 9.025e-04 |Time: 0.02s | rTime: 1.212e+00h | LR: 5.000e-03
+Epoch: 70| It: 0| Loss: 1.308e-01| physLoss: 1.252e-02 | lINITIAL: 9.363e-03 | wLoss: 5.440e-02 | inLoss: 5.366e-02 | outLoss: 8.302e-04 |Time: 0.02s | rTime: 1.408e+00h | LR: 5.000e-03
+Epoch: 80| It: 0| Loss: 5.987e-02| physLoss: 1.298e-02 | lINITIAL: 1.367e-02 | wLoss: 2.242e-02 | inLoss: 9.744e-03 | outLoss: 1.058e-03 |Time: 0.02s | rTime: 1.604e+00h | LR: 5.000e-03
+Epoch: 90| It: 0| Loss: 1.096e-01| physLoss: 1.181e-02 | lINITIAL: 8.365e-03 | wLoss: 5.550e-02 | inLoss: 3.298e-02 | outLoss: 9.134e-04 |Time: 0.02s | rTime: 1.800e+00h | LR: 5.000e-03

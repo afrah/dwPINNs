@@ -1,0 +1,13 @@
+Using mode: M1
+neural network: [3, 50, 50, 50, 3]
+collocation Training data size : 1820 (0.06999999999999999%)
+Wall Training data size: 1200 (0.6%)
+Initial Training data size: 1822 (7.000000000000001%)
+INLET Training data size: 100 (100%)
+OUTLET Training data size: 780 (30.0%)
+Total training datset size: 3900 (0.13912174936681768%)
+Activation function: hard_swish
+number of iterations: 400
+Method desciption : learning rates: Exponential decay  with initial value: 5.0000e-03
+File directory: /media/afrah2/MyWork/files2023/SK/dwPINNs/checkpoints/Oct-15-2023_04-53-10-160401_M1
+Epoch: 0| It: 0| Loss: 3.408e-01| physLoss: 1.558e-02 | lINITIAL: 1.199e-01 | wLoss: 1.098e-01 | inLoss: 5.115e-02 | outLoss: 4.439e-02 |Time: 0.00s | rTime: 4.427e-04h | LR: 5.000e-03

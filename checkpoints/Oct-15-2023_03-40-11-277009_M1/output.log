@@ -1,0 +1,27 @@
+Epoch: 0| It: 0| Loss: 1.208e+00| physLoss: 6.682e-02 | lINITIAL: 3.950e-01 | wLoss: 6.317e-02 | inLoss: 4.389e-02 | outLoss: 6.390e-01 |Time: 0.05s | rTime: 4.177e-04h | LR: 5.000e-03
+Epoch: 10| It: 0| Loss: 3.102e-01| physLoss: 2.158e-02 | lINITIAL: 1.922e-01 | wLoss: 4.717e-02 | inLoss: 4.064e-02 | outLoss: 8.630e-03 |Time: 0.02s | rTime: 2.224e-01h | LR: 5.000e-03
+Epoch: 20| It: 0| Loss: 1.194e-01| physLoss: 3.141e-02 | lINITIAL: 3.729e-02 | wLoss: 2.871e-02 | inLoss: 6.387e-03 | outLoss: 1.560e-02 |Time: 0.02s | rTime: 4.181e-01h | LR: 5.000e-03
+Epoch: 30| It: 0| Loss: 9.926e-02| physLoss: 5.014e-03 | lINITIAL: 3.347e-02 | wLoss: 1.703e-02 | inLoss: 2.060e-02 | outLoss: 2.316e-02 |Time: 0.02s | rTime: 6.131e-01h | LR: 5.000e-03
+Epoch: 40| It: 0| Loss: 1.245e-01| physLoss: 1.481e-02 | lINITIAL: 5.171e-02 | wLoss: 2.095e-02 | inLoss: 2.644e-02 | outLoss: 1.064e-02 |Time: 0.02s | rTime: 8.081e-01h | LR: 5.000e-03
+Epoch: 50| It: 0| Loss: 7.533e-02| physLoss: 6.260e-03 | lINITIAL: 1.695e-02 | wLoss: 2.786e-02 | inLoss: 1.998e-02 | outLoss: 4.280e-03 |Time: 0.02s | rTime: 1.005e+00h | LR: 5.000e-03
+Epoch: 60| It: 0| Loss: 9.305e-02| physLoss: 1.007e-02 | lINITIAL: 2.290e-02 | wLoss: 3.813e-02 | inLoss: 1.237e-02 | outLoss: 9.574e-03 |Time: 0.02s | rTime: 1.201e+00h | LR: 5.000e-03
+Epoch: 70| It: 0| Loss: 1.209e-01| physLoss: 1.982e-02 | lINITIAL: 2.458e-02 | wLoss: 3.289e-02 | inLoss: 1.721e-02 | outLoss: 2.639e-02 |Time: 0.02s | rTime: 1.397e+00h | LR: 5.000e-03
+Epoch: 80| It: 0| Loss: 8.224e-02| physLoss: 1.556e-02 | lINITIAL: 1.817e-02 | wLoss: 2.777e-02 | inLoss: 1.709e-02 | outLoss: 3.643e-03 |Time: 0.02s | rTime: 1.594e+00h | LR: 5.000e-03
+Epoch: 90| It: 0| Loss: 6.680e-02| physLoss: 5.685e-03 | lINITIAL: 1.275e-02 | wLoss: 3.070e-02 | inLoss: 1.593e-02 | outLoss: 1.736e-03 |Time: 0.02s | rTime: 1.795e+00h | LR: 5.000e-03
+
+Predicting nn solution
+
+ Relative L2 ERROR:
+domain U velocity  : 9.277e+01 %
+domain V velocity  : 1.306e+04 %
+domain P Pressure  : 6.322e+01 %
+
+ Relative l1 error
+domain U velocity  : 8.902e+01 %
+domain V velocity  : 2.374e+04 %
+domain P Pressure  : 5.633e+01 %
+Final loss loss_OUTLET: 4.301456e-03
+Final loss loss_INLET: 2.046273e-02
+Final loss loss_WALL: 3.936594e-02
+Final loss loss_Initial: 2.625156e-02
+Final loss loss_res: 3.945452e-03
