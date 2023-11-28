@@ -149,12 +149,12 @@ def u_x_model(x, y, t):
 
 
 @tf.function
-def grad(u_model, x_f_batch, y_f_batch, t_f_batch, xb_batch, yb_batch, tb_batch, ub_batch, vb_batch, weight_ub,
-         weight_fu):
+def grad(u_model, x_f_batch, y_f_batch, t_f_batch, xb_batch, yb_batch, tb_batch, ub_batch, vb_batch, weight_ub, weight_fu):
+
     with tf.GradientTape(persistent=True) as tape:
 
-        loss_value, mse_b, mse_f = loss(x_f_batch, y_f_batch, t_f_batch, xb_batch, yb_batch, tb_batch, ub_batch,
-                                        vb_batch, weight_ub, weight_fu)
+        loss_value, mse_b, mse_f = loss(x_f_batch, y_f_batch, t_f_batch, xb_batch, yb_batch, tb_batch, ub_batch, vb_batch, weight_ub, weight_fu)
+        
         grads = tape.gradient(loss_value, u_model.trainable_variables)
 
         grads_ub = tape.gradient(loss_value, weight_ub)
@@ -213,8 +213,7 @@ def fit(x_f, y_f, t_f, xb, yb, tb, ub, vb, weight_ub, weight_fu, u_exact1, v_exa
 
             loss_history.append(loss_value)
             
-            if loss_history[-1] < loss_history[-2] and loss_history[-2] < loss_history[-3] and loss_history[-1] < \
-                    loss_history[-10]:
+            if loss_history[-1] < loss_history[-2] and loss_history[-2] < loss_history[-3] and loss_history[-1] < loss_history[-10]:
                 tf_optimizer_weights.apply_gradients(zip([-grads_fu], [weight_fu]))
                 tf_optimizer_u.apply_gradients(zip([-grads_ub], [weight_ub]))
 
