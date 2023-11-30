@@ -1,0 +1,33 @@
+Using mode: M1
+neural network: [3, 50, 50, 50, 3]
+collocation Training data size : 1820 (0.06999999999999999%)
+Wall Training data size: 1200 (0.6%)
+Initial Training data size: 1822 (7.000000000000001%)
+INLET Training data size: 100 (100%)
+OUTLET Training data size: 780 (30.0%)
+Total training datset size: 3900 (0.13912174936681768%)
+Activation function: hard_swish
+number of iterations: 400
+Method desciption : learning rates: Exponential decay  with initial value: 5.0000e-03
+File directory: /media/afrah2/MyWork/files2023/SK/dwPINNs/checkpoints/Nov-28-2023_20-52-25-606745_M1
+Epoch: 0| It: 0| Loss: 5.416e-01| physLoss: 6.366e-02 | lINITIAL: 7.134e-02 | wLoss: 1.117e-01 | inLoss: 2.779e-01 | outLoss: 1.701e-02 |Time: 0.00s | rTime: 2.403e-04h | LR: 5.000e-03
+Epoch: 100| It: 0| Loss: 1.991e-02| physLoss: 3.463e-03 | lINITIAL: 3.990e-03 | wLoss: 1.063e-02 | inLoss: 1.589e-03 | outLoss: 2.333e-04 |Time: 0.00s | rTime: 6.420e-02h | LR: 5.000e-03
+Epoch: 200| It: 0| Loss: 1.822e-02| physLoss: 3.703e-03 | lINITIAL: 2.718e-03 | wLoss: 8.184e-03 | inLoss: 3.364e-03 | outLoss: 2.480e-04 |Time: 0.00s | rTime: 9.017e-02h | LR: 5.000e-03
+Epoch: 300| It: 0| Loss: 1.708e-02| physLoss: 3.872e-03 | lINITIAL: 2.293e-03 | wLoss: 9.323e-03 | inLoss: 1.550e-03 | outLoss: 4.320e-05 |Time: 0.00s | rTime: 1.148e-01h | LR: 5.000e-03
+Final loss loss_OUTLET: 2.478502e-05
+Final loss loss_INLET: 1.184432e-03
+Final loss loss_WALL: 8.332808e-03
+Final loss loss_Initial: 2.539188e-03
+Final loss loss_Phys: 3.440827e-03
+
+Predicting nn solution
+
+ Relative L2 ERROR:
+domain U velocity  : 8.934e+01 %
+domain V velocity  : 1.108e+04 %
+domain P Pressure  : 2.036e+02 %
+
+ Relative l1 error
+domain U velocity  : 8.539e+01 %
+domain V velocity  : 2.135e+04 %
+domain P Pressure  : 2.051e+02 %
