@@ -13,7 +13,7 @@ import time
 import scipy.io
 import math
 import matplotlib.gridspec as gridspec
-from plotting import newfig
+from NS1.plotting import newfig
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from tensorflow import keras
 from tensorflow.keras.models import Sequential

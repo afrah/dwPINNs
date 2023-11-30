@@ -56,7 +56,7 @@ import matplotlib.tri as tri
 import seaborn as sns
 import matplotlib.animation as mpa
 
-from utilities import *
+from NS1.utilities import *
 
 os.environ["KMP_WARNINGS"] = "FALSE" 
 ###################################################
